@@ -18,7 +18,7 @@ const Navigation = () => {
     { name: "Inicio", href: "#inicio" },
     { name: "Servicios", href: "#servicios" },
     { name: "Proyectos", href: "#proyectos" },
-    { name: "Equipo", href: "#equipo" },
+    // { name: "Equipo", href: "#equipo" },
     { name: "Contacto", href: "#contacto" },
   ];
 
@@ -34,16 +34,18 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-lg shadow-lg border-b border-cyan-100"
+          ? "bg-[#3F3F3F] backdrop-blur-lg shadow-lg border-b border-cyan-100"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           <div className="flex-shrink-0">
-            <h1 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
-              Vaala Group
-            </h1>
+            <img
+              src="src/img/Negativa_Horizontal_Sin_Fondo.png"
+              alt="Vaala Group"
+              className="h-8 lg:h-10"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -52,7 +54,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 hover:text-cyan-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative group"
+                className="text-white hover:text-cyan-600 px-3 py-2 text-sm font-medium transition-colors duration-200 relative group"
               >
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-600 group-hover:w-full transition-all duration-300"></span>
@@ -60,7 +62,7 @@ const Navigation = () => {
             ))}
             <button
               onClick={() => scrollToSection("#contacto")}
-              className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-200"
+              className="bg-gradient-to-r from-[#006699] to-[#4BC2F1] text-white px-6 py-2 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-200"
             >
               Contáctanos
             </button>
